@@ -1,16 +1,47 @@
-MIT License
+EMIT License – The Ethical MIT License
 
-Copyright (c) 2026 Frank Kyler
+For Ethical, Transparent, and Conditional Commercial Use.
+
+Copyright (c) 2025 SkyScraper
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+of this software and associated documentation files (the "Software"), to use,
+copy, modify, merge, publish, and distribute the Software, subject to the
+following conditions:
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. The above copyright notice and this permission notice shall be included in
+   all copies or substantial portions of the Software.
+
+2. **Permitted Uses**:
+   a. This Software may be used for personal, educational, or academic research purposes.
+   b. Non-profit organizations or other entities that are, by jurisdictional structure,
+      legally prohibited from generating profit, are permitted to use and monetize the
+      Software **only** under the conditions outlined in Section 3.
+
+3. **Transparency Requirement for Monetized Use by Non-Profit Entities**:
+   If any legally non-profit organization or zero-profit entity monetizes the use of this
+   Software (modified or not), the following conditions must be met:
+   a. The complete source code of the Software, including all modifications, must be
+      released under a license no more restrictive than this one.
+   b. The infrastructure and deployment context must also be documented and open-sourced,
+      including, but not limited to:
+      - Hardware specifications
+      - Network topology (how traffic is routed and handled)
+      - Operating systems and security layers used (e.g., encryption protocols)
+      - Access controls and server management policies (e.g., SSH configuration)
+      - Any third-party services used to deploy or operate the Software
+
+   If the Software is **not monetized**, the infrastructure disclosure is not required.
+
+4. **Public Distribution Clause**:
+   If the Software (modified or unmodified) is made available to the public—
+   whether for free or as part of any distribution model—it must be distributed
+   with its full source code under a license no more restrictive than this one.
+
+5. **Private Use Clause**:
+   Use of the Software strictly within a private organization or for personal use,
+   without redistribution to the public and without monetization, does **not**
+   require public release of source code or infrastructure documentation.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
