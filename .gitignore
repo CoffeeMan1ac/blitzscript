@@ -1,0 +1,21 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+.vite/
+
+# rust / tauri
+src-tauri/target/
+
+# sqlite database (derived cache — never canonical)
+*.db
+*.db-*
+
+# os
+.DS_Store
+
+# logs / env
+*.log
+.env
+.env.local
