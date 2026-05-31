@@ -20,6 +20,7 @@ interface AppState {
 
   init: () => Promise<void>;
   chooseRoot: () => Promise<void>;
+  scanPath: (path: string) => Promise<void>;
   rescan: () => Promise<void>;
   setQuery: (q: string) => void;
   select: (id: string | null) => void;
@@ -53,6 +54,20 @@ export const useStore = create<AppState>((set, get) => ({
     set({ root: picked, scanning: true, error: null, selectedId: null });
     try {
       const commands = await api.scan(picked);
+      set({ commands, scanning: false });
+    } catch (e) {
+      set({ error: String(e), scanning: false });
+    }
+  },
+
+  // Scan an explicitly typed/pasted path — the reliable alternative to the
+  // native folder picker. The backend rejects non-directories.
+  scanPath: async (path) => {
+    const trimmed = path.trim();
+    if (!trimmed) return;
+    set({ root: trimmed, scanning: true, error: null, selectedId: null });
+    try {
+      const commands = await api.scan(trimmed);
       set({ commands, scanning: false });
     } catch (e) {
       set({ error: String(e), scanning: false });

@@ -63,12 +63,14 @@ body {
   flex: 1;
   min-width: 0;
 }
-.root-path {
+.root-input {
   flex: 1;
   min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  padding: 7px 11px;
+  background: var(--panel-2);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
   font-family: ui-monospace, monospace;
   font-size: 12px;
 }
