@@ -1,0 +1,34 @@
+[workspace]
+members = [".", "crates/core"]
+
+[package]
+name = "blitzscript"
+version = "0.1.0"
+description = "Local-first launcher for the commands that already exist across your repos."
+authors = ["blitzscript"]
+edition = "2021"
+rust-version = "1.77"
+
+# The library is what Tauri links against; the binary is a thin wrapper.
+[lib]
+name = "blitzscript_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+# The GUI-free core: discovery, the derived SQLite cache, and the heuristic.
+blitzscript-core = { path = "crates/core" }
+
+tauri = { version = "2", features = [] }
+tauri-plugin-dialog = "2"
+
+serde = { version = "1", features = ["derive"] }
+
+# PTY-backed execution so ANSI output from the child renders correctly.
+portable-pty = "0.8"
+
+[features]
+# This feature is used by the Tauri CLI for production builds.
+custom-protocol = ["tauri/custom-protocol"]
